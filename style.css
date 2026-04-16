@@ -1,0 +1,66 @@
+body {
+    background-color: #121212;
+    color: white;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+}
+
+/* Анимированные круглые иконки */
+.icon-container {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.circle-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, #007bff, #00ff88);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: float 3s ease-in-out infinite;
+}
+
+.circle-icon:hover {
+    transform: scale(1.2) rotate(10deg);
+    box-shadow: 0 0 20px rgba(0, 255, 136, 0.6);
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* Редактор */
+.editor-box {
+    background: #1e1e1e;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    border: 1px solid #333;
+    width: 350px;
+}
+
+#previewContainer {
+    margin-top: 20px;
+    width: 100%;
+    min-height: 200px;
+    border: 2px dashed #444;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+#previewContainer img {
+    max-width: 100%;
+    border-radius: 10px;
+}
