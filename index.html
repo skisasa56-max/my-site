@@ -2,28 +2,67 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Kassius Nelson | Редактор</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kassius Nelson | Dashboard</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
 
-    <header>
-        <h1>Kassius Nelson</h1>
-        <div class="icon-container">
-            <div class="circle-icon">JS</div>
-            <div class="circle-icon">UI</div>
-            <div class="circle-icon">FX</div>
+    <header class="main-header">
+        <div class="profile-section">
+            <div class="avatar-placeholder">KN</div>
+            <h1>Kassius Nelson</h1>
+            <p class="status">Online | Developer</p>
         </div>
+        
+        <nav class="nav-icons">
+            <a href="https://vk.com/leondaar" target="_blank" class="icon-link vk-link" title="VK создателя">
+                <i class="fab fa-vk"></i>
+                <span class="icon-text">VK</span>
+            </a>
+            
+            <a href="#" class="icon-link" title="Проекты">
+                <i class="fas fa-code"></i>
+                <span class="icon-text">Dev</span>
+            </a>
+            <a href="#" class="icon-link" title="Настройки">
+                <i class="fas fa-cog"></i>
+                <span class="icon-text">Set</span>
+            </a>
+        </nav>
     </header>
 
-    <main>
-        <div class="editor-box">
-            <h2>Фото Редактор</h2>
-            <input type="file" id="imageInput" accept="image/*">
-            <div id="previewContainer">
-                <p>Загрузите фото для предпросмотра</p>
+    <main class="content-wrapper">
+        <section class="tools-container">
+            <h2>Рабочие инструменты</h2>
+            
+            <div class="tool-card editor-tool">
+                <div class="tool-header">
+                    <i class="fas fa-image"></i>
+                    <h3>Фото Редактор v1.0</h3>
+                </div>
+                <p>Загрузите изображение для быстрого предпросмотра.</p>
+                
+                <div class="file-upload-wrapper">
+                    <input type="file" id="imageInput" accept="image/*" class="file-input">
+                    <label for="imageInput" class="file-label">Выбрать фото</label>
+                </div>
+                
+                <div id="previewContainer" class="preview-box">
+                    <p class="preview-placeholder">Фото появится здесь</p>
+                </div>
             </div>
-        </div>
+            
+            <div class="tool-card lock-tool">
+                <div class="tool-header">
+                    <i class="fas fa-lock"></i>
+                    <h3>Скоро...</h3>
+                </div>
+                <p>Новый инструмент в разработке.</p>
+            </div>
+
+        </section>
     </main>
 
     <script src="script.js"></script>
